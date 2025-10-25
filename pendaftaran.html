@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran - SD Negeri Genteng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="logo-area">
+    <img src="logo_sekolah1.png" alt="Logo Sekolah" class="header-logo">
+    <h1>SDN GENTENG</h1>
+    <p>KOTA BOGOR</p>
+</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+        <li><a href="pendaftaran.html" class="active">Pendaftaran</a></li>
+        <li><a href="fasilitas.html">Fasilitas</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Informasi Pendaftaran</h2>
+    <p>Pendaftaran siswa baru SD Negeri Genteng dilakukan secara langsung di sekolah.</p>
+    <p>Persyaratan</p>
+    <ul>
+      <li>Mengisi Formulir Pendaftaran.</li>
+      <li>Materai.</li>
+      <li>Kartu Keluarga (Asli).</li>
+      <li>Akta Kelahiran (Asli).</li>
+      <li>Fotocopy (KK orang tua, KTP orang tua, Akta kelahiran dan Ijazah Paud).</li>
+    </ul>
+    <p>Waktu pendaftaran: <strong>Setiap hari kerja pukul 08.00 - 12.00 WIB</strong></p>
+  </section>
+
+  <div class="status-cek-area">
+    <h2>Cek Status Pendaftaran Anda (Live)</h2>
+    <p>Masukkan Nomor Pendaftaran Unik yang Anda terima saat mendaftar.</p>
+    
+    <form id="formCekStatus">
+        <label for="nomor_daftar">Nomor Pendaftaran (Contoh: PPDB-2025-123):</label>
+        <input type="text" id="nomor_daftar" name="nomor" required 
+              placeholder="Contoh: PPDB-2025-123" 
+              style="padding: 10px; width: 300px; margin-right: 10px;">
+        
+        <button type="submit" id="btnCekStatus" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">
+            Cek Status
+        </button>
+    </form>
+    
+    <div id="hasil-status"></div> 
+</div>
+
+<div class="info-online" style="margin-top: 40px; text-align: center; border-top: 2px solid #eee; padding-top: 30px; padding-bottom: 30px;">
+    <h2>Pendaftaran Jalur Online</h2>
+    <p>Anda dapat mendaftar dengan lebih mudah dan cepat dari rumah.</p>
+    
+    <a href="formulir_ppdb.php"
+        style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px;">
+        KLIK DI SINI UNTUK DAFTAR ONLINE
+    </a>
+</div>
+
+  <footer>
+    <p>Hak Cipta &copy; SD Negeri Genteng | Diciptakan oleh Mahasiswa Teknik Informatika Universitas Pamulang</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

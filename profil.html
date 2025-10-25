@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sekolah - SD Negeri Genteng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="logo_sekolah1.png" alt="Logo Sekolah" class="header-logo">
+                <h1>SDN GENTENG</h1>
+                <p>KOTA BOGOR</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
+                <li><a href="kegiatan.html">Kegiatan</a></li>
+                <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <div class="profil-grid">
+                <div class="sejarah-content">
+                    <h2>Sejarah Singkat dan Profil Sekolah</h2>
+                    <p style="text-align: justify;">SD Negeri Genteng berdiri sejak tahun 1970, Akreditasi sekolah B diberdirikan sekolah ini dengan tujuan memberikan pendidikan dasar berkualitas bagi masyarakat 
+                    sekitar. Sekolah ini berada di bawah naungan Kementerian Pendidikan dan Kebudayaan dan memiliki SK Akreditasi No. 763/BAN-SM/SK/2019 yang diterbitkan pada tanggal 09-09-2019.
+                    <br><br>
+                    SD Negeri Genteng menerapkan sistem pembelajaran double shift selama enam hari dalam seminggu. Sekolah ini juga memiliki akses internet melalui jaringan Indosat IM3 dan menggunakan listrik dari PLN.
+                    </p>
+                    
+                    <h3>Struktur Organisasi</h3>
+                    <p><strong>Kepala Sekolah:</strong> Ibu Hj. Andriyani, S.Pd., M.M.</p>
+                    <p>Guru Kelas 1–6 dan Tenaga Kependidikan berkomitmen tinggi dalam mendukung proses belajar mengajar yang optimal.</p>
+                </div>
+
+                <div class="visi-misi-card">
+                    <h2>Visi Sekolah</h2>
+                    <p>Terwujudnya peserta didik yang cerdas, berkarakter, dan berakhlak mulia.</p>
+                    
+                    <h2>Misi Sekolah</h2>
+                    <ul>
+                        <li>Menumbuhkan semangat belajar dan rasa ingin tahu siswa.</li>
+                        <li>Meningkatkan prestasi akademik dan non-akademik.</li>
+                        <li>Mengembangkan nilai-nilai moral dan kedisiplinan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="guru-slider-area">
+            <h2>Guru dan Tenaga Kependidikan Kami</h2>
+            <p>SD Negeri Genteng memiliki tenaga pendidik dan kependidikan yang berdedikasi tinggi. Geser lingkaran di bawah untuk melihat nama guru dan jabatannya:</p>
+            
+            <div class="foto-bersama-wrapper">
+                <img src="foto guru.jpg" alt="Foto Bersama Seluruh Guru dan Staf">
+            </div>
+
+            <div id="guru-name-wrapper">
+                <div class="guru-name-card">
+                    <h3 id="guru-nama"></h3>
+                    <p id="guru-jabatan"></p>
+                </div>
+            </div>
+            
+
+            <div class="dots" id="dots-container"></div>
+        </section>
+    </div>
+
+    <script>
+        const guruData = [
+            { nama: "Yustini, S.Pd SD", mapel: "Guru Kelas 1" },
+            { nama: "Dani Ruhadi Fajar P, S.Pd", mapel: "Guru Kelas 4" },
+            { nama: "Iik Ruhayati, S.Pd SD", mapel: "Guru Kelas 2" },
+            { nama: "Siti Nurita, S.Pd SD", mapel: "Guru Kelas 6" },
+            { nama: "Mia Fahmiati, S.Pd", mapel: "Guru Kelas 6" },
+            { nama: "Nena Naifa, S.Pd", mapel: "Guru Kelas 1" },
+            { nama: "Marwan Irfan, S.Pd", mapel: "Guru Kelas 3" },
+            { nama: "Anna Roswita Sari, S.Pd", mapel: "Guru Kelas 2" },
+            { nama: "Suhendar S, S.Pd", mapel: "Guru PJOK" },
+            { nama: "Muhamad Chambali, S.Pd", mapel: "Guru PAI" },
+            { nama: "Restu Nurhamidah, S.Pd", mapel: "Guru Kelas 5" },
+            { nama: "Ernawati, S.Pd", mapel: "Guru Kelas 3" },
+            { nama: "Muhamad Fahmi Alghifari, S.Pd", mapel: "Guru Kelas 4" },
+            { nama: "Ratna Devi, S.Pd", mapel: "Guru Kelas 4" },
+            { nama: "Desy Puspitasari, S.Pd", mapel: "Guru Kelas 5" }
+
+            // Tambahkan guru lain di sini
+        ];
+
+        let currentIndex = 0;
+        const guruNamaEl = document.getElementById("guru-nama");
+        const guruJabatanEl = document.getElementById("guru-jabatan");
+        const dotsContainer = document.getElementById("dots-container");
+
+        function updateSlide(index) {
+            const data = guruData[index];
+            guruNamaEl.textContent = data.nama;
+            guruJabatanEl.textContent = data.mapel;
+            
+            // Perbarui dot aktif
+            const dots = document.querySelectorAll(".dot");
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("active", i === index);
+            });
+        }
+
+        function createDots() {
+            guruData.forEach((_, i) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                if (i === currentIndex) dot.classList.add("active"); // Set aktif awal
+                
+                dot.addEventListener("click", () => {
+                    currentIndex = i;
+                    updateSlide(currentIndex);
+                    resetAutoSlide();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        let autoSlideInterval;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % guruData.length;
+            updateSlide(currentIndex);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 8000); // Geser tiap 8 detik
+        }
+        
+        // Inisialisasi
+        createDots();
+        updateSlide(currentIndex);
+        resetAutoSlide(); 
+    </script>
+
+    <footer>
+        <p>Hak Cipta &copy; SD Negeri Genteng | Diciptakan oleh Mahasiswa Teknik Informatika Universitas Pamulang</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

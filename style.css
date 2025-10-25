@@ -1,0 +1,794 @@
+/* ==================== DASAR HALAMAN ==================== */
+body {
+  margin-left: 3px;
+  margin-right: 3px;
+  padding:2px 2px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ==================== CONTAINER & SECTION ==================== */
+.container {
+  width: 85%;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  display: flex;  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: white;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.sambutan {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ==================== NAVIGASI ==================== */
+nav {
+  background: #0d47a1;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #00337f;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 10px;
+  display: block;
+  font-size: 14px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #005de8;
+  border-radius: 5px;
+}
+
+/* ==================== HEADER ==================== */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 80 10px 30px 10px;
+}
+
+/* ==================== HEADER: LOGO AREA ==================== */
+.header-container {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 2px;
+}
+
+.logo-area h1 {
+  margin: 0;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* ==================== HERO SECTION ==================== */
+
+.kepalasekolah-image {
+  width: 100%;
+  max-width: 400px; /* agar di layar besar tetap tidak lebih dari 400px */
+  height: auto; /* biar proporsional */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* agar tetap di tengah */
+}
+
+.main-content-area {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.hero-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* ==================== STATISTIK ==================== */
+.statistik {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 15px;
+  background-color: #ffffff;
+  position: relative;
+  top: -40px;
+  z-index: 10;
+}
+
+.stat-card {
+  background: #fff;
+  flex: 1 1 200px;
+  max-width: 220px;
+  padding: 20px 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card i {
+  font-size: 38px;
+  color: #1b2653;
+  margin-bottom: 10px;
+}
+
+.ekskul-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+.ekskul-list-wrapper {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.ekskul-card {
+  
+    flex: 0 0 300px;
+    width: 300px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    scroll-snap-align: start;
+}
+
+.ekskul-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.ekskul-card h3 {
+    padding: 10px 15px 0;
+    margin: 0;
+    color: #004aad;
+}
+
+.ekskul-card p {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.fasilitas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+.fasilitas-item {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.fasilitas-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.fasilitas-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.fasilitas-item h3 {
+    color: #004aad;
+    padding: 10px 15px 5px;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.fasilitas-item p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.prestasi-list {
+    display: grid;
+    /* Tampilkan 3 kolom dengan lebar yang sama, beri jarak 20px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Setiap Item Prestasi */
+.prestasi-item {
+    background: #ffffff;
+    border: 1px solid #eee; /* Tambahkan sedikit border */
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.prestasi-item:hover {
+    transform: translateY(-5px); /* Efek melayang saat kursor diarahkan */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.prestasi-item img {
+    width: 100%;
+    height: 200px; /* Kunci tinggi gambar prestasi agar seragam */
+    object-fit: cover;
+    display: block;
+}
+
+.prestasi-item h3 {
+    color: #0d47a1; /* Warna biru navigasi */
+    padding: 10px 15px 5px;
+    margin-top: 0;
+    font-size: 1.1em;
+    min-height: 40px; /* Pastikan tinggi judul seragam jika ada yang 2 baris */
+}
+
+.prestasi-item p {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.gallery {
+    /* Pastikan padding dan margin sesuai dengan gaya section default Anda */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Grid Wrapper - KUNCI TATA LETAK KOLOM */
+.gallery-grid {
+    display: grid;
+    /* Tampilkan 3 kolom dengan lebar yang sama, beri jarak 15px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 15px; 
+    margin-top: 25px;
+}
+
+/* Setiap Item Galeri (Pembungkus Gambar) */
+.gallery-item {
+    overflow: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Memberi indikasi bahwa gambar dapat di klik/diperbesar */
+}
+
+.gallery-item:hover {
+    transform: scale(1.03); /* Efek zoom tipis saat hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    /* Kunci tinggi semua gambar agar galeri terlihat seragam */
+    height: 250px; 
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa distorsi */
+    display: block;
+}
+
+/* ==================== Form PPDB ==================== */
+.form-ppdb {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Judul Utama */
+.form-ppdb h1 {
+    color: #004aad;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* Fieldset untuk Grup Data */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    color: #0d47a1;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Wrapper untuk Input Field - KUNCI UNTUK KOLOM */
+.input-wrapper {
+    display: grid;
+    /* Membuat kolom yang fleksibel, minimal 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px 20px; /* Jarak vertikal dan horizontal */
+}
+
+/* Gaya Label dan Input */
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar total */
+    font-size: 1em;
+}
+
+/* Styling Khusus Textarea (Alamat) */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Styling Input File */
+input[type="file"] {
+    display: block;
+    padding: 10px 0;
+}
+.keterangan-file {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Tombol Kirim Pendaftaran */
+.submit-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-area button {
+    background-color: #28a745; /* Hijau */
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-area button:hover {
+    background-color: #1e7e34;
+}
+
+/* ==================== profil ==================== */
+.profil-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .visi-misi-card {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .visi-misi-card h2 {
+            border-bottom: 2px solid #004aad;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .visi-misi-card ul {
+            padding-left: 20px;
+        }
+        .sejarah-content {
+            text-align: justify;
+        }
+        
+        /* Tata Letak Area Guru */
+        .guru-slider-area {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f9f9fc;
+            border-radius: 10px;
+        }
+        
+        /* Area Foto Statis (Tampilkan foto bersama) */
+        .foto-bersama-wrapper {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .foto-bersama-wrapper img {
+            width: 700px;
+            height: 400px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Card Nama Guru yang Bergeser */
+        .guru-name-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            max-width: 400px;
+            margin: 20px auto;
+            min-height: 80px; /* Menjaga tinggi agar tidak meloncat */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .guru-name-card h3 {
+            color: #004aad;
+            margin: 5px 0;
+        }
+        .guru-name-card p {
+            color: #555;
+            font-style: italic;
+        }
+        .dots {
+            margin-top: 20px;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #004aad;
+        }
+
+/* ==================== FOOTER ==================== */
+        /* === WRAPPER UTAMA === */
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f7fa;
+}
+
+/* === CARD UTAMA === */
+.info-card {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover (hanya di PC) */
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Judul dan subjudul */
+.info-card h2 {
+  color: #004aad;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+}
+
+/* List gaya */
+.info-card ul {
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.info-card li {
+  margin-bottom: 6px;
+}
+        
+/* ==================== FOOTER ==================== */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+    padding: 12px 8px;
+  }
+
+  .header-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+.fasilitas-list {
+        /* Tampilkan 2 kolom di tablet */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+.prestasi-list {
+        /* Tampilkan 2 kolom di tablet */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        /* Tampilkan 2 kolom di tablet */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+  }
+
+/* HP */
+@media screen and (max-width: 600px) {
+  body {
+    margin-left: 5px;
+  margin-right: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .sambutan img {
+    width: 300px;
+    height: auto;
+  }
+
+  .foto-bersama-wrapper {
+            width: 500px;
+            max-width: 100%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                }
+
+  .foto-bersama-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .header-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-area h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  header {
+    padding: 40px 20px 10px;
+  }
+
+
+.ekskul-list-wrapper {
+        padding-left: 10px; /* Jarak dari tepi layar HP */
+    }
+    .ekskul-card {
+        /* PENTING: Membuat lebar kartu hampir penuh layar HP */
+        flex: 0 0 90vw; /* 90% dari lebar viewport */
+        width: 90vw;
+        margin-right: 15px;
+    }
+
+.fasilitas-list {
+        /* Tampilkan 1 kolom di HP, kartu menjadi stack vertikal */
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .fasilitas-item img {
+        height: 180px; /* Tinggi gambar sedikit dikurangi di HP */
+    }
+
+    .prestasi-list {
+        /* Tampilkan 1 kolom di HP */
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .prestasi-item img {
+        height: 180px; /* Tinggi gambar prestasi sedikit dikurangi di HP */
+    }
+
+    .gallery {
+        padding: 20px 10px;
+    }
+    .gallery-grid {
+        /* Tampilkan 1 kolom di HP, agar gambar terlihat besar dan jelas */
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .gallery-item img {
+        height: 200px; /* Tinggi gambar sedikit dikurangi di HP */
+    }
+
+    .form-ppdb {
+        padding: 10px;
+    }
+    
+    /* Grid akan otomatis menjadi 1 kolom karena minmax(250px, 1fr) */
+    .input-wrapper {
+        grid-template-columns: 1fr;
+        gap: 5px; /* Kurangi jarak antar field */
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .guru-card img {
+        height: 350px;
+        width: 350px;
+    }
+    .profil-grid {
+                grid-template-columns: 1fr;
+            }
+
+    .info-card {
+    padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .info-card h2 {
+    font-size: 18px;
+    border-left: 4px solid #004aad;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 15px;
+  }
+
+
+  }
+
+/* Layar sangat kecil */
+@media (max-width: 480px) {
+  .header-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+}
